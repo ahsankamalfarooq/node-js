@@ -25,21 +25,56 @@
 
 //importing file from auth.js
 
-const reister = require('./auth')
+// const reister = require('./auth')
 
-reister('ALi')
-
-
+// reister('ALi')
 
 
 
+///////////////////////////////////////////////////////////
+// Core Modules
+///////////////////////////////////////////////////////////
+
+const path = require('path')
 
 
+//DIRNAME (So if we want to find folder name we can file through it or any url etc)
+
+// console.log('folder name : ', path.dirname(__filename))
 
 
+//FileNAME (So if we want to find folder name we can file through it or any url etc)
+
+// console.log('file name : ', path.basename(--__filename))
+
+//////////////////////////////////////////////////////////
+//ExtensionNAME 
+
+// console.log('Ext name : ', path.extname(__filename))
+//////////////////////////////////////////////////////////////
+//Parse 
+
+// console.log('Parse : ', path.parse(__filename))
+
+///////////////////////////////////////////////////////////
+// Join 
+
+// console.log('Parse : ', path.join(__filename))
 
 
+///////////////////////////////////////////////////////////
+// File system
 
+const fs = require('fs');
 
+//make dir
+
+fs.mkdir(path.join(__dirname, 'test'), (err) => {
+ if(err) {
+    console.log('spmething went wrong', err)
+    return
+ }
+    console.log('Folder Created' )
+})
 
 
