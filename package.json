@@ -1,0 +1,28 @@
+{
+  "name": "node-js",
+  "version": "1.0.0",
+  "description": "this is nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsankamalfarooq/node-js.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "ahsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahsankamalfarooq/node-js/issues"
+  },
+  "homepage": "https://github.com/ahsankamalfarooq/node-js#readme",
+  "dependencies": {
+    "cli-color": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
