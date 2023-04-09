@@ -45,7 +45,7 @@ const path = require('path')
 
 //FileNAME (So if we want to find folder name we can file through it or any url etc)
 
-// console.log('file name : ', path.basename(--__filename))
+// console.log('file name : ', path.basename(__filename))
 
 //////////////////////////////////////////////////////////
 //ExtensionNAME 
@@ -69,12 +69,135 @@ const fs = require('fs');
 
 //make dir
 
-fs.mkdir(path.join(__dirname, 'test'), (err) => {
- if(err) {
-    console.log('spmething went wrong', err)
-    return
- }
-    console.log('Folder Created' )
-})
+// fs.mkdir(path.join(__dirname, 'test'), (err) => {
+//  if(err) {
+//     console.log('spmething went wrong', err)
+//     return
+//  }
+//     console.log('Folder Created' )
+// })
+
+
+
+///////////////////////////////////////////////////////////
+// Create A file
+
+//so this method makes the file and if we again create the file so it will no give an error regard it will delete the file 
+//content and rewrite it
+// fs.writeFile( path.join(__dirname, "test", "test.js") , "Hello Bugti" , (err) => {
+//   if(err) {
+//     console.log(err)
+//     return
+//   } else{
+//     console.log("file created")
+//   }
+// } )
+
+//so if we want to not to delete the file content and add the file content so we have to use append file method
+
+// fs.appendFile( path.join(__dirname, "test", "test.js") , "Hello khr" , (err) => {
+//   if(err) {
+//     console.log(err)
+//     return
+//   } else{
+//     console.log("file created")
+//   }
+// } )
+
+
+/////////////////////////////////////////////////////////////
+//Read A File
+
+// fs.readFile(path.join(__dirname, "test", "test.js"), (err, data) => {
+//   if(err) {
+//     throw err
+//   }
+//   //here we r receiving bin data so to get string data do following
+//   const content = Buffer.from(data)
+//   console.log(data.toString())
+// })
+
+
+// Another Method to do that
+
+
+// fs.readFile(path.join(__dirname, "test", "test.js"), 'utf-8' ,(err, data) => {
+//   if(err) {
+//     throw err
+//   }
+//   //here we r receiving bin data so to get string data do following
+
+//   // console.log(data.toString())
+//   console.log(data)
+// })
+
+//////////////////////////////////////////////////////////////
+
+// Operation sys Module 
+
+// OS MODULE 
+
+const os = require('os')
+
+// console.log("os type:" , os.type())
+
+//type === platform
+
+// console.log("os platform:" , os.platform())
+
+// CPU ARCHITECTURE
+// console.log("cpu architecture:" , os.arch())
+
+//more info
+
+// console.log("cpu details:" , os.cpus())
+
+//MEMORY
+
+// console.log("Total memory:" , os.freemem())
+
+// total MEMORY
+
+// console.log("Total memory:" , os.totalmem())
+
+
+// PC started since
+
+console.log("pc started from:" , os.uptime())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
