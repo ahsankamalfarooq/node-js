@@ -163,10 +163,62 @@ const os = require('os')
 
 // PC started since
 
-console.log("pc started from:" , os.uptime())
+// console.log("pc started from:" , os.uptime())
 
 
+////////////////////////////////////////////////////////
+//EVENTS MODULE
+//////////////////////////////////////////////////////////
 
+const Emitter = require('events')
+
+// Emitter is a class so make obj of it 
+
+// const myEmitter = new Emitter()
+// event name clcik
+// myEmitter.on('click', (data) => {
+//   console.log(data)
+// })
+
+// //sending the event that is click event and the data associated with that event
+
+// myEmitter.emit('click' , {
+//   name: "ALI",
+//   ch : "Strong"
+// })
+
+//ANOTHER EXAMPLE PRACTICLE RELATED
+
+
+// class Auth extends Emitter{
+//   register(username) {
+//     console.log('registered successfully...')
+//     //we want to send the verification main to thoese who register by calling the emit method which we inherited form the emitter class
+//     this.emit('registered', username )
+//   }
+
+// }
+
+// const mangoauth = new Auth()
+// //listen to the event
+
+// //Verify Email
+// mangoauth.on('registered', (data) => {
+//   console.log(`sening e-mail to ${data}`)
+// })
+
+// //Welcome EMail
+// mangoauth.on('registered', (data) => {
+//   console.log(`sening welcome e-mail to ${data}`)
+// }) 
+
+// //we can add multiple listeners to an event
+// mangoauth.register('Mango Tree')
+
+
+//////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
 
 
 
